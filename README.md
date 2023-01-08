@@ -17,7 +17,7 @@ The user can then place their initials in for addition to the score board.
 The score will be saved in the user's local storage, and can be cleared. 
 
 ### Image of Site
-![Screen Shot 2022-12-22 at 1 43 20 PM](https://user-images.githubusercontent.com/118683737/209215598-0d405862-fdbc-4581-afd9-da78d34d98b2.png)
+![Screen Shot 2023-01-08 at 3 39 39 PM](https://user-images.githubusercontent.com/118683737/211220868-abf64961-8f02-4c4d-b8a5-8b38dc887d0e.png)
 
 
 
