@@ -39,6 +39,7 @@ var choicesEl = document.getElementById('choices');
 var startBtn = document.getElementById('start')
 var submitBtn = document.getElementById('submit');
 var initialsEl = document.getElementById('initials')
+var feedbackEl = document.getElementById('feedback')
 
 // Function starts quiz by hiding start screen and removing the hide class
 // on questions, starts timer
@@ -56,7 +57,7 @@ function clockTick(){
     timerEl.textContent = time;
 
     if(time <= 0) {
-        endQuiz();
+        quizEnd();
     }
 }
 
@@ -82,6 +83,88 @@ function getQuestion(){
 
 }
 
+// Function for selecting the answer choices in the quiz.  Time penalty. Gives
+// user feedback on answer choice, pauses timer, moves on to next question or
+// ends quiz if no more questions. 
+function questionClick(event) {
+    var buttonEl =event.target;
 
+    if (!buttonEl.matches('.choice')) {
+        return;
+    }
 
+    if (buttonEl.value !== questions[currentQuestionIndex].answer) {
+        time -= 15;
+
+        if (time < 0) {
+            time = 0;
+        }
+
+        timerEl.textContent = time;
+        feedbackEl.textContent = 'Incorrect';
+    } else {
+        feedbackEl.textContent = 'Correct'
+    }
+
+    currentQuestionIndex++;
+
+    feedbackEl.setAttribute('class', 'feedback');
+    setTimeout(function(){
+        feedbackEl.setAttribute('class', 'feedback hide');
+    }, 1000);
+
+    if (time <= 0 || currentQuestionIndex === questions.length) {
+        quizEnd();
+    } else {
+        getQuestion();
+    }
+}
+
+// Function to end quiz - Stops interval, displays end screen, sets time as 
+// final score
+function quizEnd() {
+    clearInterval(timerId);
+
+    var endScreenEl = document.getElementById('end-screen');
+    endScreenEl.removeAttribute('class');
+    var finalScoreEl = document.getElementById('final-score');
+    finalScoreEl.textContent = time;
+
+    questionsEl.setAttribute('class', 'hide');
+}
+
+function saveHighscore() {
+    var initials = initialsEl.value.trim();
+
+    if (initials !== '') {
+        var highscores = 
+        JSON.parse(window.localStorage.getItem('highscores')) || [];
+
+        var newScore = {
+            score: time,
+            initials: initials,
+        };
+
+        highscores.push(newScore);
+        window.localStorage.setItem('highscores', JSON.stringify(highscores));
+
+        window.location.href = 'highscore.html';
+    }
+}
+
+function checkForEnter(event) {
+    if(event.key === 'Enter') {
+        saveHighscore();
+    }
+}
+
+// Event Listeners
 startBtn.onclick = startQuiz;
+
+submitBtn.onclick = saveHighscore;
+
+choicesEl.onclick = questionClick;
+
+initialsEl.onkeyup = checkForEnter;
+
+
