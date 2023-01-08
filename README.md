@@ -22,10 +22,7 @@ The score will be saved in the user's local storage, and can be cleared.
 
 
 ## Contributing
-
-Source code for Password Generator can be found https://github.com/coding-boot-camp/friendly-parakeet.  Source code was developed as an exercise for a coding boot camp developed by XANDROMUS.  Thank you for the source code.
-
-Basis for functioning code can be found at https://stackoverflow.com/questions/61239900/javascript-user-input-password-generator  
+Students in class worked with professor and TA to get started on the game.  
 
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
