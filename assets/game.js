@@ -1,29 +1,54 @@
 // Variables as questions for quiz
 var questions = [
     {
-        title: 'Question 1',
-        choices: ['a', 'b', 'c', 'd'],
-        answer: 'a',
+        title: 'Items contained in "quotes" are defined as...',
+        choices: ['numbers', 'functions', 'strings', 'values'],
+        answer: 'strings',
     },
     {
-        title: 'Question 2',
-        choices: ['a', 'b', 'c', 'd'],
-        answer: 'a',
+        title: 'Variables, functions, and statements that use true or false is called...',
+        choices: ['Boolean', 'Bouillon', 'Boobits', 'Boobinary'],
+        answer: 'Boolean',
     },
     {
-        title: 'Question 3',
-        choices: ['a', 'b', 'c', 'd'],
-        answer: 'a',
+        title: 'Variables in JS are typed as..',
+        choices: ['variable', 'v', 'vari', 'var'],
+        answer: 'var',
     },
     {
-        title: 'Question 4',
-        choices: ['a', 'b', 'c', 'd'],
-        answer: 'a',
+        title: 'JavaScript allows you to traverse the...',
+        choices: ['expanse', 'DOM', 'CMD', 'plains'],
+        answer: 'DOM',
     },
     {
-        title: 'Question 5',
-        choices: ['a', 'b', 'c', 'd'],
-        answer: 'a',
+        title: 'If a a condition is not met for the first condition to excute a block of code, it run another block is an example of... ',
+        choices: ['If/Then', 'Variable', 'For Loop', 'If/Else'],
+        answer: 'If/Else',
+    },
+    {
+        title: 'A For Loop is used to check for a condition repeatedly',
+        choices: ['True', 'False'],
+        answer: 'True',
+    },
+    {
+        title: 'If/Then or If/Else are examples of what?',
+        choices: ['Event Listeners', 'Conditional Statements', 'API', 'CSS'],
+        answer: 'Conditional Statements',
+    },
+    {
+        title: 'JavaScript is linked to what code to have it run?',
+        choices: ['JS', 'CSS', 'HMML', 'HTML'],
+        answer: 'HTML',
+    },
+    {
+        title: 'onclick is an example of...',
+        choices: ['variable', 'Event Listener', 'styling', 'Conditional'],
+        answer: 'Event Listener',
+    },
+    {
+        title: 'What must you do before you call a function',
+        choices: ['Pick up the Phone', 'Use a conditional statement', 'Load the function', 'Define the function'],
+        answer: 'Define the function',
     },
 ];
 
