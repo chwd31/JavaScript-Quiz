@@ -19,6 +19,8 @@ The score will be saved in the user's local storage, and can be cleared.
 ### Image of Site
 ![Screen Shot 2023-01-08 at 3 39 39 PM](https://user-images.githubusercontent.com/118683737/211220868-abf64961-8f02-4c4d-b8a5-8b38dc887d0e.png)
 
+![Screen Shot 2023-01-08 at 3 55 22 PM](https://user-images.githubusercontent.com/118683737/211221031-1c2b0527-1eeb-460c-a076-e773772b1112.png)
+
 
 
 ## Contributing
