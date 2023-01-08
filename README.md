@@ -4,7 +4,9 @@ Students were tasked to create a JavaScript quiz using what we have learned abou
 
 ## Installation
 
-The JavaScript Quiz can be found at  No other installation is necessary.
+The JavaScript Quiz can be found at https://chwd31.github.io/Quiz_Challenge/  
+
+No other installation is necessary.
 
 ## Usage
 This game is for use by anyone to test their JS knowledge. 
